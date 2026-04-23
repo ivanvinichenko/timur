@@ -1,0 +1,42 @@
+@import '../styles/mixins';
+@import '../styles/variables.scss';
+
+
+.footer{
+    @include flex-space-around;
+
+    width:100%;
+    margin:100px auto 0;
+    height:220px;
+    background-color:$bg_gray;
+
+    &__heading{
+        @include h2;
+    }
+    &__linkbox{
+        @include flex-space-between-column;
+
+        &__item{
+            white-space: nowrap;
+            text-decoration: none;
+            color: inherit;
+            font-size:$font_size_mid;
+            font-size:300;
+            }
+
+        &__item:hover{
+           color:$active_color;
+           text-decoration:underline;
+        }
+    }
+    &__getContactBox{
+        @include flex-space-between-column;
+        gap:10px;
+
+        &__socials{
+             @include flex-space-between;
+        }
+    }
+
+
+}

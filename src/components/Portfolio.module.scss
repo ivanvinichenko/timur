@@ -1,0 +1,51 @@
+@import '../styles/mixins';
+@import '../styles/variables.scss';
+
+.portfolio_heading{
+    @include h2;
+    font-size:$font-size_h2;
+    margin:100px auto 50px;
+    width:auto;
+    text-align:center;
+
+    
+}
+.portfolioBox{
+        @include flex-space-between;
+        max-width:1100px;
+        margin: 0 auto;
+
+        &__item{
+            @include flex-space-between-column;
+            width: 450px;
+
+            &__location{
+                margin-top:6px;
+                font-size:$font_size_small;
+                font-weight:$font_weight_big;
+                color:$desc_color;
+            }
+            &__desc{
+                font-size:$font_size_mid;
+                font-weight:$font_weight_big;
+                margin-bottom:20px;
+            }
+            &__information{
+                @include flex-space-between;
+
+                &__priceBox, &__squareBox{
+
+                    &__heading{
+                        font-size:$font_size_small;
+                        font-weight:$font_weight_big;
+                        color:$desc_color;
+                    }
+
+                    &__price, &__square{
+                        font-size:$font-size_prices;
+                    }
+                }
+
+            }
+        }
+    }

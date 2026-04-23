@@ -1,0 +1,19 @@
+.swiper {
+  width: 450px;
+  height: 300px;
+
+
+  // Настройка стрелок (navigation)
+  --swiper-navigation-color: white;
+  --swiper-navigation-size: 30px; // Размер стрелок
+
+  &__img{
+    height:300px;
+    width:450px;
+    border-radius:20px;
+
+  }
+}
+
+
+

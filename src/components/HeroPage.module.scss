@@ -1,0 +1,60 @@
+@import '../styles/mixins';
+@import '../styles/variables.scss';
+
+
+.bg_container{
+    height:auto;
+    max-width:1100px;
+    display:flex;
+    flex-direction:column;
+    margin: 100px auto 0;
+    background-color:#F9F9F9;
+    border-radius: 200px 200px 0 0;
+}
+.pictures_container{
+    display: flex;
+    justify-content:space-between;
+    gap:10px;
+    width:100%;
+    
+    
+}
+.pictures_container div{     
+    height: auto;         
+    max-height: 36vh;
+    max-width:100%;
+
+}
+.features{
+    @include flex-space-between;
+}
+.feature_item{
+    display: flex;
+    flex-direction:column;
+    width:180px;
+    height:120px;
+    margin-top:40px;
+
+    &__img{
+        width:100px;
+    }
+    &__heading{
+        font-size:$font_size_mid;
+        margin-top:10px;
+        font-weight:$font_weight_big;
+    }
+    &__description{
+        font-size:$font_size_small;
+    }
+
+}
+.feature_item:first-child{
+    margin-left:40px;
+}
+.feature_item:last-child{
+    margin-right:40px;
+}
+
+@media (max-width:1200px){
+
+}

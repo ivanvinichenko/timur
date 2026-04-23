@@ -1,0 +1,27 @@
+@import '../styles/mixins';
+@import '../styles/variables.scss';
+
+.aboutUs_box{
+    @include flex-space-between;
+    margin:100px auto;
+    height:335px;
+    max-width:1100px;
+}
+.description_box{
+    @include flex-space-between-column;
+    height: 300px;
+
+    &__star{
+        width:70px;
+        height:70px;
+    }
+
+    &__heading{
+        @include h2
+    }
+
+    &__desc{
+        max-width: 480px;
+    }
+
+}

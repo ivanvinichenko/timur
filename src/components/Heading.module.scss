@@ -1,0 +1,16 @@
+@import '../styles/mixins';
+@import '../styles/variables.scss';
+
+.main_heading{
+    margin:80px auto 10px;
+    width: fit-content;
+    
+}
+.secondary_heading{
+    margin:0 auto;
+    width:fit-content;
+    font-weight:$font_weight_thin;
+    width:350px;
+    text-align:center;
+    
+}

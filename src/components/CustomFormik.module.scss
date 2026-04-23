@@ -1,0 +1,40 @@
+@import '../styles/mixins';
+@import '../styles/variables.scss';
+
+.form {
+    @include flex-space-between-column;
+    height: auto; 
+    gap: 20px;    
+    max-width: 400px;
+    margin: 0 auto; 
+
+    &__field, &__button {
+        height: 50px;
+        width: 400px; 
+        max-width: 100%; 
+        min-width: 300px; 
+        
+        border-radius: 20px;
+        border: none;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    &__button {
+        background-color: white;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: #f0f0f0;
+        }
+        &:disabled {
+      background-color: #ccc;
+    }
+    }
+}
+.error {
+    color: red;
+    font-size: 12px;
+    padding-left: 10px;
+  }

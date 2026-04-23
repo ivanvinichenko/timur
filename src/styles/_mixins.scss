@@ -1,0 +1,51 @@
+@import './variables';
+
+@mixin flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+@mixin flex-space-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; 
+}
+@mixin flex-space-between-column {
+  display: flex;
+  justify-content: space-between;
+  flex-direction:column;
+
+}
+@mixin flex-center {
+  display:flex;
+  justify-content:center;
+}
+
+@mixin overlay_text{
+  width: 60%;
+  position:absolute;
+  top:50%;
+  left:50%;
+  color:white;
+  transform:translate(-50%,-50%);
+  text-align: center;
+}
+@mixin heading{
+    font-size:$font-size_h2;
+    font-weight:$font_weight_mid;
+    margin:100px auto 40px auto;
+    width:fit-content;
+}
+@mixin h2{
+      font-size:$font-size_h2;
+      font-weight:$font_weight_big;
+}
+@mixin callbutton{
+  text-decoration: none ;
+  color: inherit;
+  display: inline-block;
+  border: 2px solid #D19F9C;
+  border-radius: 10px;
+  height:34px;
+  padding:4px 8px; 
+}

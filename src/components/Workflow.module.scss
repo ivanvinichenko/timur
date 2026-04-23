@@ -1,0 +1,141 @@
+@import '../styles/mixins';
+@import '../styles/variables.scss';
+
+
+.heading{
+    @include heading;
+    margin-left:auto;
+}
+.workflow_box{
+    @include flex-space-between;
+    margin:0 auto;
+    max-width:1100px;
+
+
+    &__item{
+        @include flex-space-between-column;
+        max-width:200px;
+        position:relative;
+        justify-content: flex-start;
+        min-height: 150px;
+
+        &__starBox{
+            display:flex;
+
+            &__star{
+            width:20px;
+            height:20px;
+            }
+        }
+        &__heading{
+            font-size:$font_size_mid;
+            font-weight:$font_weight_big;
+            margin-top:10px;
+        }
+        &__desc{
+            font-size:$font_size_small;
+            font-weight:$font_weight_mid;
+        }
+
+    }
+    &__item::after{
+        content:'';
+        position:absolute;
+        background-image: url('../assets/dots.svg');
+        background-repeat: no-repeat;
+        background-size: contain; 
+        width: 60px; 
+        height: 34px;
+        top: 8%;
+        left: 80% ;
+        transform: translateY(-50%)
+    }
+    &__item:last-child::after {
+        display: none;
+    }
+}
+
+@media(max-width:1000px){
+   .workflow_box__item{
+    max-width:150px;
+   }
+   .workflow_box__item:after{
+    left:66%;
+   }
+}
+@media(max-width:850px){
+    .heading{
+        margin:60px auto 20px auto;
+        font-size:30px;
+    }
+}
+@media(max-width:700px){
+    .heading{
+        margin:60px auto 20px auto;
+    }
+   .workflow_box__item{
+    max-width:120px;
+   }
+   .workflow_box__item:after{
+    left:66%;
+   }
+   .workflow_box__item__desc{
+    font-size:10px;
+   }
+}
+@media(max-width:600px){
+   
+   .workflow_box__item:after{
+    width:40px;
+    top:11%;
+    left:56%;
+   }
+   .workflow_box__item:nth-child(3)::after{
+    width:40px;
+    top:11%;
+    left:70%;
+   }
+   .workflow_box__item{
+    max-width:100px;
+   }
+   .workflow_box__item__desc{
+    font-size:8px;
+   }
+   .workflow_box__item__heading{
+    font-size:16px;
+   }
+
+   
+}
+@media(max-width:460px){
+   
+   .workflow_box__item:after{
+    width:25px;
+    top:14%;
+    left:40%;
+   }
+   .workflow_box__item:nth-child(2)::after{
+     width:25px;
+    top:14%;
+    left:50%;
+   }
+   .workflow_box__item:nth-child(3)::after{
+     width:25px;
+    top:14%;
+    left:64%;
+   }
+   .workflow_box__item__starBox__star{
+    width:16px;
+   }
+   .workflow_box__item{
+    max-width:80px;
+   }
+   .workflow_box__item__desc{
+    font-size:6px;
+   }
+   .workflow_box__item__heading{
+    font-size:10px;
+   }
+
+   
+}
