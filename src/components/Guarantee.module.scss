@@ -3,6 +3,7 @@
 
 .guarantee{
     @include flex-space-between;
+    gap:20px;
     height:90px;
     max-width:1100px;
     margin:60px auto;
@@ -32,5 +33,38 @@
     .guarantee{
         margin:40px auto;
         font-size:30px;
+    }
+    .guarantee__heading{
+        font-size:30px;
+    }
+    .guarantee__desc{
+         margin-right:0;
+        font-size:16px;
+    }
+}
+@media(max-width:850px){
+    .guarantee__heading{
+        font-size:24px;
+    }
+    .guarantee__desc{
+        margin-right:0;
+        font-size:12px;
+    }
+}
+@media(max-width:600px){
+    .guarantee__star{
+        width:24px;
+    }
+}
+@media(max-width:450px){
+    .guarantee{
+        height:70px;
+    }
+    .guarantee__heading{
+        font-size:20px;
+    }
+    .guarantee__desc{
+        margin-right:0;
+        font-size:8px;
     }
 }

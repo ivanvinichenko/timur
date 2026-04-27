@@ -1,19 +1,25 @@
 .swiper {
-  width: 450px;
-  height: 300px;
+  width: 100%;
+  max-width:450px;
+  height: auto;
+  max-height:300px;
 
-
-  // Настройка стрелок (navigation)
   --swiper-navigation-color: white;
-  --swiper-navigation-size: 30px; // Размер стрелок
+  --swiper-navigation-size: 30px; 
 
   &__img{
-    height:300px;
-    width:450px;
+    height:auto;
+    max-height:300px;
+    width:100%;
     border-radius:20px;
 
   }
 }
 
+@media(max-width:600px){
+  .swiper{
+    --swiper-navigation-size: 20px; 
+  }
+}
 
 

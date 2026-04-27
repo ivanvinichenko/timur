@@ -14,8 +14,13 @@
   display: flex;
   justify-content: space-between;
   flex-direction:column;
-
 }
+@mixin flex-space-around-column {
+  display: flex;
+  justify-content: space-around;
+  flex-direction:column;
+}
+
 @mixin flex-center {
   display:flex;
   justify-content:center;

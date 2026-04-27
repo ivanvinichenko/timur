@@ -4,11 +4,12 @@
 
 .footer{
     @include flex-space-around;
-
     width:100%;
     margin:100px auto 0;
-    height:220px;
+    padding: 40px 20px;
+    min-height: 220px;
     background-color:$bg_gray;
+    flex-wrap:wrap
 
     &__heading{
         @include h2;
@@ -21,7 +22,7 @@
             text-decoration: none;
             color: inherit;
             font-size:$font_size_mid;
-            font-size:300;
+            font-weight:300;
             }
 
         &__item:hover{
@@ -37,6 +38,29 @@
              @include flex-space-between;
         }
     }
+}
 
-
+@media (max-width:750px){
+    .footer__heading{
+        font-size:25px;
+    }
+    .footer__linkbox__item{
+        font-size:$font_size_small;
+    }
+    .footer__getContactBox__socials__item{
+        height:20px;
+    }
+    .footer__getContactBox__number{
+        font-size: 12px;
+    }
+}
+@media (max-width:450px){
+    .footer{
+        flex-wrap: wrap;
+    }
+    .footer__heading{
+        flex: 0 0 100%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
 }

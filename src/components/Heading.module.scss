@@ -14,3 +14,32 @@
     text-align:center;
     
 }
+@media (max-width:700px){
+    .main_heading{
+        font-size: 22px;
+        margin-top:60px;
+    }
+    .secondary_heading{
+        font-size: 18px;
+    }
+}
+@media (max-width:480px){
+    .main_heading{
+        font-size: 18px;
+        margin-top:40px;
+    }
+    .secondary_heading{
+        font-size: 14px;
+        width:auto;
+    }
+}
+@media (max-width:380px){
+    .main_heading{
+        font-size: 14px;
+
+    }
+    .secondary_heading{
+        font-size: 10px;
+        
+    }
+}
