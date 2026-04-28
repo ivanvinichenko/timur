@@ -4,6 +4,7 @@
 .main_heading{
     margin:80px auto 10px;
     width: fit-content;
+    text-align:center;
     
 }
 .secondary_heading{
@@ -14,10 +15,15 @@
     text-align:center;
     
 }
+@media (max-width:850px){
+    .main_heading{
+        margin:20px auto 10px;
+    }
+}
 @media (max-width:700px){
     .main_heading{
         font-size: 22px;
-        margin-top:60px;
+        margin-top:40px;
     }
     .secondary_heading{
         font-size: 18px;
@@ -26,7 +32,7 @@
 @media (max-width:480px){
     .main_heading{
         font-size: 18px;
-        margin-top:40px;
+        margin-top:20px;
     }
     .secondary_heading{
         font-size: 14px;

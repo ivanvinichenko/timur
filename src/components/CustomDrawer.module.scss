@@ -1,0 +1,82 @@
+@import '../styles/mixins';
+@import '../styles/variables.scss';
+
+
+.burgerBtn {
+  display: none;
+  height:40px;
+  width:40px; 
+  border: none;
+  cursor: pointer;
+}
+.burgerBtn img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.navbar__list{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.content {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width:30%;
+  max-width: 250px;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  &__getContact{
+    @include flex-space-around-column;
+    gap:20px;
+
+      &__socials{
+        @include flex-space-around;
+        gap:10px;
+
+      }
+
+      &__callButton{
+        @include callbutton;
+      }
+      &__callButton img{
+        margin:auto;
+      }
+
+
+  }
+}
+.close{
+  margin-left:auto;
+}
+.close img{
+  height:30px;
+}
+@media (max-width:850px){
+  .burgerBtn{
+      display:block;
+  }
+}
+@media (max-width:450px){
+  .close img{
+    height:20px;
+  }
+  .navbar__left__list__item,{
+    font-size:$font_size_small;
+  }
+  .content__getContact__socials__item{
+    height:16px;
+  }
+}

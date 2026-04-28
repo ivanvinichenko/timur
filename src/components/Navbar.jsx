@@ -3,6 +3,7 @@ import wa_icon from '../assets/wa_icon.svg'
 import tg_icon from '../assets/tg_icon.svg'
 import inst_icon from '../assets/inst_icon.svg'
 
+
 export default function Navbar(){
 
     const menu_links = {

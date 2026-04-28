@@ -1,4 +1,6 @@
 import Navbar from './components/Navbar'
+import CustomDrawer from './components/CustomDrawer'
+import s from './components/CustomDrawer.module.scss';
 import Heading from './components/Heading'
 import HeroPage from './components/HeroPage'
 import Workflow from './components/Workflow'
@@ -13,6 +15,7 @@ function App() {
   return(
     <>
         <Navbar />
+        <CustomDrawer className={s.drawer} />
         <Heading />
         <HeroPage />
         <Services />

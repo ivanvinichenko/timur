@@ -68,8 +68,13 @@
        
     }
 
-    @media (max-width:1400px){
-        .right__number{
-            display:none;
-        }
+@media (max-width:1400px){
+    .right__number{
+        display:none;
     }
+}
+@media (max-width:850px){
+    .navbar{
+        display:none;
+    }
+}
