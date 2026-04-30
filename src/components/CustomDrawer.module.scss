@@ -21,16 +21,23 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 .navbar__list{
+  margin-top:10px;
   display:flex;
   flex-direction:column;
-  gap:10px;
+  gap:14px;
+
+  &__item:hover{
+    color:$active_color;
+    text-decoration:underline;
+  }
 }
+
 .content {
   position: fixed;
   left: 0;
   top: 0;
   bottom: 0;
-  width:30%;
+  width:35%;
   max-width: 250px;
   background-color: white;
   padding: 20px;
@@ -46,10 +53,14 @@
         @include flex-space-around;
         gap:10px;
 
+
       }
 
       &__callButton{
         @include callbutton;
+      }
+      &__callButton:hover{
+        background-color:#D19F9C;
       }
       &__callButton img{
         margin:auto;
@@ -78,5 +89,10 @@
   }
   .content__getContact__socials__item{
     height:16px;
+  }
+
+  .content__getContact__socials__item:last-child,
+  .content__getContact__socials__item:nth-child(2){
+    height:20px;
   }
 }

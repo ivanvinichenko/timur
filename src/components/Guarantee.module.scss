@@ -26,23 +26,19 @@
         color:$desc_color;
         margin-right:120px;
     }
+}
+@media(max-width:950px){
+
+    .guarantee__desc{
+        margin-right:60px;
+    }
 
 }
-
 @media(max-width:850px){
     .guarantee{
         margin:40px auto;
         font-size:30px;
     }
-    .guarantee__heading{
-        font-size:30px;
-    }
-    .guarantee__desc{
-         margin-right:0;
-        font-size:16px;
-    }
-}
-@media(max-width:850px){
     .guarantee__heading{
         font-size:24px;
     }

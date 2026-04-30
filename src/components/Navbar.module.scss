@@ -51,7 +51,14 @@
             &__item{
             margin:0 5px;
             height:20px;
+            }
+
+            &__item:nth-child(2),
+            &__item:nth-child(3){
+            margin:0 5px;
+            height:26px;
         }}
+
         &__number {
             text-decoration: none;
             color: inherit;
@@ -72,8 +79,12 @@
     .right__number{
         display:none;
     }
+    .right__icon_container__item{
+        display:none;
+    }
 }
 @media (max-width:850px){
+    
     .navbar{
         display:none;
     }

@@ -7,56 +7,34 @@ import plumbing from '../assets/plumbing.svg'
 import tiling from '../assets/tiling.svg'
 import finishing from '../assets/finishing.svg'
 
+export default function Services() {
+  const servicesData = [
+    { img: deconstruction, title: 'Демонтаж и перепланировка', alt: 'Демонтаж' },
+    { img: plastering, title: 'Черновое выравнивание', alt: 'Черновое выравнивание' },
+    { img: framing, title: 'Возведение перегородок', alt: 'Возведение перегородок' },
+    { img: wiring, title: 'Инженерная электрика', alt: 'Инженерная электрика' },
+    { img: plumbing, title: 'Сантехника и отопление', alt: 'Сантехника и отопление' },
+    { img: tiling, title: 'Укладка плитки и керамогранита', alt: 'Укладка плитки' },
+    { img: finishing, title: 'Финишная отделка', alt: 'Финишная отделка' },
+  ];
 
-export default function Services(){
-    return(
-        <>
-            <h2 id='services'className={s.heading}>Наши Услуги</h2>
-            <div className={s.pic_line}>
-                <div className={s.pic_line__img_wrapper}>
-                    <img src={deconstruction} alt='Демонтаж'/>
-                    <p className={s.pic_line__img_wrapper__heading} >Демонтаж и перепланировка</p>
-                    <p className={s.pic_line__img_wrapper__overlay_text}>Узнать больше</p>
-                </div>
-                <div className={s.pic_line__img_wrapper}>
-                    <img src={plastering} alt='Черновое выравнивание'/>
-                    <p className={s.pic_line__img_wrapper__heading}>Черновое выравнивание</p>
-                    <p className={s.pic_line__img_wrapper__overlay_text}>Узнать больше</p>
-                </div>
-                
-                <div className={s.pic_line__img_wrapper}>
-                    <img src={framing} alt='Возведение перегородок'/>
-                    <p className={s.pic_line__img_wrapper__heading}>Возведение перегородок</p>
-                    <p className={s.pic_line__img_wrapper__overlay_text}>Узнать больше</p>
-                </div>
-                
+  return (
+    <>
+      <h2 id='services' className={s.heading}>Наши Услуги</h2>
+      <div className={s.pic_line}>
+        {servicesData.map((service, index) => (
+          <div key={index} className={s.service_item}>
+            <div className={s.pic_line__img_wrapper}>
+              <img src={service.img} alt={service.alt} />
+              <p className={s.pic_line__img_wrapper__heading}>{service.title}</p>
+              <p className={s.pic_line__img_wrapper__overlay_text}>Узнать больше</p>
             </div>
-            <div className={s.pic_line}>
-                <div className={s.pic_line__img_wrapper}>
-                    <img src={wiring} alt='Инженерная электрика'/>
-                    <p className={s.pic_line__img_wrapper__heading}>Инженерная электрика</p>
-                    <p className={s.pic_line__img_wrapper__overlay_text}>Узнать больше</p>
-                </div>
-                
-                <div className={s.pic_line__img_wrapper}>
-                    <img src={plumbing} alt='Сантехника и отопление'/>
-                    <p className={s.pic_line__img_wrapper__heading}>Сантехника и отопление</p>
-                    <p className={s.pic_line__img_wrapper__overlay_text}>Узнать больше</p>
-                </div>
-                
-                <div className={s.pic_line__img_wrapper}>
-                    <img src={tiling} alt='Укладка плитки и керамогранита'/>
-                    <p className={s.pic_line__img_wrapper__heading}>Укладка плитки и керамогранита</p>
-                    <p className={s.pic_line__img_wrapper__overlay_text}>Узнать больше</p>
-                </div>
-                
-                <div className={s.pic_line__img_wrapper}>
-                    <img src={finishing} alt='Финишная отделка'/>
-                    <p className={s.pic_line__img_wrapper__heading}>Финишная отделка</p>
-                    <p className={s.pic_line__img_wrapper__overlay_text}>Узнать больше </p>
-                </div>
-                
+            <div className={s.desc_container}>
+              <p>Описание услуги для мобильной версии</p>
             </div>
-        </>
-    )
+          </div>
+        ))}
+      </div>
+    </>
+  );
 }

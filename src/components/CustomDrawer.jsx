@@ -38,7 +38,7 @@ export default function CustomDrawer({ className }) {
                 <ul className={s.navbar__list}>
                     {Object.entries(menu_links).map(([label, value]) => (
                         <li key={value}>
-                            <a className={s.navbar__list} href={`#${value}`} onClick={()=> setOpen(false)}>
+                            <a className={s.navbar__list__item} href={`#${value}`} onClick={()=> setOpen(false)}>
                                 {label} 
                             </a>
                         </li>

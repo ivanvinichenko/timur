@@ -1,86 +1,124 @@
 @import '../styles/mixins';
 @import '../styles/variables.scss';
 
-
-.heading{
-    @include heading;
-}
-.pic_line{
-    max-width:1100px;
-    margin: 0 auto;
-    @include flex-center;
-
-    &__img_wrapper{
-        position:relative;
-
-        &__heading{
-           @include overlay_text;
-           font-weight:$font_weight_big;
-           font-size:$font_size_mid;
-
-        }
-
-        &__overlay_text{
-            @include overlay_text;
-            top:70%;
-            font-size:$font_size_small;
-            font-weight:300;
-        }
-    }
+.heading {
+  @include heading;
 }
 
-@media(max-width:1200px){
-    .pic_line__img_wrapper__heading{
-        font-size:16px;
-    }
-}
-@media(max-width:850px){
+.pic_line {
+  max-width: 1100px;
+  margin: 0 auto;
+  @include flex-center;
+  flex-wrap: wrap;
+  gap: 20px;
 
-    .heading{
-        font-size:30px;
-        margin:60px auto 20px auto;
-    }
-    .pic_line__img_wrapper__heading{
-        font-size:12px;
-    }
-    .pic_line__img_wrapper__overlay_text{
-        font-size:10px;
-    }
-}
-@media(max-width:620px){
+  // Контейнер для пары картинка + описание
+  .service_item {
+    display: contents; // На десктопе игнорируем обертку, чтобы работала общая сетка flex
+  }
 
-    .heading{
-        font-size:24px;
-        margin:40px auto 20px auto;
-    }
-    .pic_line__img_wrapper__heading{
-        font-size:10px;
-    }
-    .pic_line__img_wrapper__overlay_text{
-        font-size:8px;
-    }
-}
-@media(max-width:500px){
+  &__img_wrapper {
+    position: relative;
+    flex: 0 1 calc(25% - 20px);
+    min-width: 250px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius:20px;
 
-    .heading{
-        font-size:24px;
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
     }
-    .pic_line__img_wrapper__heading{
-        font-size:8px;
-    }
-    .pic_line__img_wrapper__overlay_text{
-        font-size:6px;
-    }
-}
-@media(max-width:400px){
 
-    .heading{
-        font-size:24px;
+    &__heading {
+      @include overlay_text;
+      font-weight: $font_weight_big;
+      font-size: $font_size_mid;
     }
-    .pic_line__img_wrapper__heading{
-        font-size:6px;
+
+    &__overlay_text {
+      @include overlay_text;
+      top: 70%;
+      font-size: $font_size_small;
+      font-weight: 300;
     }
-    .pic_line__img_wrapper__overlay_text{
-        font-size:4px;
+  }
+}
+
+.desc_container {
+  display: none; // Скрыт везде, кроме мобилок
+}
+
+// Планшеты (2 в ряд)
+@media(max-width: 850px) {
+  .pic_line {
+    justify-content: center;
+    &__img_wrapper {
+      flex: 0 1 calc(50% - 20px);
     }
+    &__img_wrapper:nth-child(7) {
+      flex: 1 1 60%;
+      max-height: 250px;
+      img { border-radius: 0 0 50px 50px !important; }
+    }
+  }
+  .heading { font-size: 30px; }
+}
+
+// МОБИЛКИ (Картинка слева, текст справа)
+@media(max-width: 574px) {
+  .pic_line {
+    flex-direction: column;
+    align-items: stretch;
+
+    .service_item {
+      display: flex !important; // Включаем обертку
+      flex-direction: row;
+      align-items: center;
+      gap: 15px;
+      width: 100%;
+    }
+
+    &__img_wrapper {
+      flex: 0 0 120px !important; // Жесткий размер
+      height: 120px !important;
+      min-width: 0 !important; // Позволяет сжиматься
+      max-width: 120px !important;
+      aspect-ratio: auto;
+
+      img {
+        border-radius: 20px !important;
+      }
+
+      &__heading {
+        font-size: 10px;
+        color: white;
+        padding: 5px;
+        text-shadow: none;
+      }
+      &__overlay_text { display: none; }
+    }
+
+    // Обнуляем спец-стили 7-го элемента для мобилки
+    &__img_wrapper:nth-child(7) {
+      flex: 0 0 120px !important;
+      max-width: 120px !important;
+      max-height: 120px !important;
+    }
+  }
+
+  .desc_container {
+    display: flex !important;
+    flex: 1;
+    height: 120px;
+    background-color: aliceblue;
+    border-radius: 20px;
+    padding: 15px;
+    align-items: center;
+    p { font-size: 12px; margin: 0; }
+  }
+
+  .heading { font-size: 24px; }
 }

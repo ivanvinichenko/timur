@@ -9,11 +9,13 @@
     padding: 40px 20px;
     min-height: 220px;
     background-color:$bg_gray;
-    flex-wrap:wrap
+    gap:10px;
+    flex-wrap:wrap;
 
     &__heading{
         @include h2;
     }
+
     &__linkbox{
         @include flex-space-between-column;
 
@@ -49,6 +51,10 @@
     }
     .footer__getContactBox__socials__item{
         height:20px;
+    }
+    .footer__getContactBox__socials__item:nth-child(2),
+    .footer__getContactBox__socials__item:nth-child(3){
+        height:24px;
     }
     .footer__getContactBox__number{
         font-size: 12px;
