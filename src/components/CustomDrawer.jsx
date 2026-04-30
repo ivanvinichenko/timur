@@ -23,7 +23,7 @@ export default function CustomDrawer({ className }) {
       <Drawer.Trigger asChild>
         {/* Добавляем внешний className к кнопке */}
         <button className={`${s.burgerBtn} ${className}`}>
-            <img src={burger} />
+            <img src={burger} alt='menu' />
         </button>
       </Drawer.Trigger>
       
@@ -32,7 +32,7 @@ export default function CustomDrawer({ className }) {
         <Drawer.Content className={s.content} onCloseAutoFocus={(e) => e.preventDefault()}>
             <div>
                 <Drawer.Close  asChild>
-                    <button className={s.close}><img src={close} /></button>
+                    <button className={s.close}><img src={close}  alt='close'/></button>
                 </Drawer.Close>
                 <nav className={s.nav}>
                 <ul className={s.navbar__list}>
@@ -53,7 +53,7 @@ export default function CustomDrawer({ className }) {
                 <img className={s.content__getContact__socials__item} src={inst_icon} alt="Instagram"></img>
             </div>
             <a href='#callback' className={s.content__getContact__callButton} onClick={()=> setOpen(false)}>
-                <img src={call} />
+                <img src={call} alt='call'/>
             </a>
           </div>
         </Drawer.Content>

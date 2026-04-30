@@ -10,6 +10,7 @@
     @include flex-space-between;
     margin:0 auto;
     max-width:1100px;
+    gap:10px;
 
 
     &__item{
@@ -17,52 +18,55 @@
         max-width:200px;
         position:relative;
         justify-content: flex-start;
-        min-height: 150px;
+        min-height: stretch;
 
-        &__starBox{
-            display:flex;
-
-            &__star{
-            width:20px;
-            height:20px;
-            }
-        }
         &__heading{
             font-size:$font_size_mid;
             font-weight:$font_weight_big;
+            padding-left: 32px;
             margin-top:10px;
+            position: relative;
+        
+
+        &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 26px; 
+                height: 26px;
+            }
         }
+
+        // А теперь вешаем разные иконки на каждый айтем:
+        &:nth-child(1) .workflow_box__item__heading::before {
+            background-image: url('../assets/one.svg');
+        }
+
+        &:nth-child(2) .workflow_box__item__heading::before {
+            background-image: url('../assets/two.svg');
+        }
+
+        &:nth-child(3) .workflow_box__item__heading::before {
+            background-image: url('../assets/three.svg');
+        }
+
+        &:nth-child(4) .workflow_box__item__heading::before {
+            background-image: url('../assets/four.svg');
+        }
+
         &__desc{
             font-size:$font_size_small;
             font-weight:$font_weight_mid;
         }
 
     }
-    &__item::after{
-        content:'';
-        position:absolute;
-        background-image: url('../assets/dots.svg');
-        background-repeat: no-repeat;
-        background-size: contain; 
-        width: 60px; 
-        height: 34px;
-        top: 8%;
-        left: 80% ;
-        transform: translateY(-50%)
-    }
-    &__item:last-child::after {
-        display: none;
-    }
 }
 
-@media(max-width:1000px){
-   .workflow_box__item{
-    max-width:150px;
-   }
-   .workflow_box__item:after{
-    left:66%;
-   }
-}
+
 @media(max-width:850px){
     .heading{
         margin:60px auto 20px auto;
@@ -74,8 +78,7 @@
         margin:60px auto 20px auto;
     }
    .workflow_box__item{
-    max-width:120px;
-    min-height: 100px;
+    max-width:stretch;
    }
    .workflow_box__item:after{
     left:66%;
@@ -102,46 +105,25 @@
    }
    .workflow_box__item{
     max-width:100px;
-    min-height: 90px;
    }
    .workflow_box__item__desc{
-    font-size:8px;
-   }
-   .workflow_box__item__heading{
-    font-size:16px;
-   }
-
-   
-}
-@media(max-width:460px){
-   
-   .workflow_box__item:after{
-    width:25px;
-    top:16%;
-    left:40%;
-   }
-   .workflow_box__item:nth-child(2)::after{
-     width:25px;
-    top:16%;
-    left:50%;
-   }
-   .workflow_box__item:nth-child(3)::after{
-     width:25px;
-    top:16%;
-    left:64%;
-   }
-   .workflow_box__item__starBox__star{
-    width:16px;
-   }
-   .workflow_box__item{
-    max-width:80px;
-   }
-   .workflow_box__item__desc{
-    font-size:6px;
-   }
-   .workflow_box__item__heading{
     font-size:10px;
    }
-
-   
+   .workflow_box__item__heading{
+    font-size:18px;
+   }
 }
+
+@media(max-width:500px) {
+    .workflow_box {
+        flex-wrap: wrap;        
+        justify-content: center;
+        gap: 30px 20px;         
+
+        &__item {
+            flex: 0 1 calc(50% - 20px); 
+            max-width: none;      
+        }
+    }
+}
+
