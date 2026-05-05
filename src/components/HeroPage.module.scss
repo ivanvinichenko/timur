@@ -28,7 +28,7 @@
 .features{
     @include flex-space-between;
     background-color:#F9F9F9;
-    gap:20px;
+    gap:10px;
 }
 .feature_item{
     display: flex;
@@ -87,7 +87,7 @@
         padding:10px;
     }
     .feature_item{
-        height:120px;
+        height:80px;
         width: calc(50% - 30px);
         margin-top: 10px;
     }
@@ -110,12 +110,19 @@
 }
 @media (max-width:460px){
     .feature_item__heading{
-        font-size:14px;
+        font-size:12px;
+        font-weight:700;
     }
     .feature_item__description{
         font-size:10px;
     }
     .feature_item{
         margin-top: 5px;
+    
+    }
+}
+@media (max-width:600px){
+    .feature_item{
+        height:110px;
     }
 }

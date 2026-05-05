@@ -47,10 +47,12 @@
         font-size:12px;
     }
 }
-@media(max-width:600px){
-    .guarantee__star{
-        width:24px;
+@media(max-width:650px){
+    .guarantee__heading{
+        @include heading_small;
+        margin:auto;
     }
+     
 }
 @media(max-width:450px){
     .guarantee{

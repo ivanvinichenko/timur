@@ -42,5 +42,13 @@
         display:none;
     }
     
-
+}
+@media(max-width:650px){
+    .description_box__heading{
+        @include heading_small;
+        margin-left:0;
+    }
+    .description_box__desc{
+        font-size:12px;
+    }
 }

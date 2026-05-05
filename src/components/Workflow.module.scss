@@ -61,6 +61,7 @@
         &__desc{
             font-size:$font_size_small;
             font-weight:$font_weight_mid;
+            margin-top:4px;
         }
 
     }
@@ -87,12 +88,15 @@
     font-size:10px;
    }
 }
-@media(max-width:620px){
+@media(max-width:650px){
     .heading{
-        font-size:24px;
-        margin:40px auto 20px auto;
+         @include heading_small;
+        }
+    .workflow_box__item__heading{
+        font-size:14px;
     }
-   
+    }
+@media(max-width:620px){
    .workflow_box__item:after{
     width:40px;
     top:11%;

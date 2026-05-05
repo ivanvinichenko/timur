@@ -64,11 +64,12 @@
       img { border-radius: 0 0 50px 50px !important; }
     }
   }
-  .heading { 
-    margin:40px auto 20px auto;
-    font-size: 30px; }
 }
-
+@media(max-width: 650px) {
+     .heading { 
+        @include heading_small;
+     }
+}
 
 @media(max-width: 574px) {
   .pic_line {

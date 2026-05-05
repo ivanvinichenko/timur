@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: backend-service
+    runtime: docker
+    rootDir: backend
+
+  - type: web
+    name: frontend-service
+    runtime: docker
+    rootDir: .
