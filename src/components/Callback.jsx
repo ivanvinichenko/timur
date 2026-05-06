@@ -7,7 +7,7 @@ import SuccessPage from './SuccessPage'
 
 export default function Callback(){
     
-    const [isSubmitted, setIsSubmitted] = useState(false)
+    const [isSubmitted, setIsSubmitted] = useState(true)
 
     return (
         <>
@@ -18,7 +18,7 @@ export default function Callback(){
                     <p className={s.callBack_box__leftSide__desc}>
                         и наш прораб свяжется с вами  и проконсультирует в ближайшее время!</p>
                 </div>
-                <CustomFormik setComplete={() => setIsSubmitted(true)} />
+                <CustomFormik setComplete={() => setIsSubmitted(false)} />
             </div>) :(
                 <SuccessPage />
             )}
