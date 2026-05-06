@@ -1,4 +1,5 @@
 import { Formik, Field, Form, ErrorMessage} from 'formik';
+import { useNavigate } from "react-router";
 import s from './CustomFormik.module.scss'
 import * as Yup from 'yup';
 
@@ -10,7 +11,9 @@ const yupSchema = Yup.object().shape({
       .required('Введите номер телефона'),
   });
 
-async function getData(values, { resetForm, setSubmitting }){
+
+
+async function getData(values, { resetForm, setSubmitting }, navigate){
     try{
         const request = new Request('https://backend-service-ckgr.onrender.com/submit-data',{
             method: "POST",
@@ -28,6 +31,7 @@ async function getData(values, { resetForm, setSubmitting }){
 
         if(response.ok){
             resetForm()
+            navigate("/success")
         }
     } catch (error){
         console.log(error);
@@ -38,6 +42,8 @@ async function getData(values, { resetForm, setSubmitting }){
 
 
  export default function CustomFormik(){
+    const navigate = useNavigate();
+
     return (
         <>
             <div >
@@ -46,7 +52,7 @@ async function getData(values, { resetForm, setSubmitting }){
                     phoneNumber: '',
                     name: '',
                 }}
-                onSubmit={(values, actions) => getData(values, actions)}
+                onSubmit={(values, actions) => getData(values, actions, navigate)}
                 validationSchema={yupSchema}
                 >
                 {({ isSubmitting}) =>(
