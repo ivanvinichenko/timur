@@ -42,7 +42,7 @@ async function getData(values, { resetForm, setSubmitting }, setComplete){
 }
 
 
- export default function CustomFormik(){
+ export default function CustomFormik({ setComplete }){
 
     return (
         <>
@@ -52,7 +52,7 @@ async function getData(values, { resetForm, setSubmitting }, setComplete){
                     phoneNumber: '',
                     name: '',
                 }}
-                onSubmit={(values, actions) => getData(values, actions)}
+                onSubmit={(values, actions) => getData(values, actions, setComplete)}
                 validationSchema={yupSchema}
                 >
                 {({ isSubmitting}) =>(
