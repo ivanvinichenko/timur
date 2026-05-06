@@ -13,7 +13,7 @@ const yupSchema = Yup.object().shape({
 
 
 
-async function getData(values, { resetForm, setSubmitting }, navigate){
+async function getData(values, { resetForm, setSubmitting }, setComplete){
     try{
         const request = new Request('https://backend-service-ckgr.onrender.com/submit-data',{
             method: "POST",
@@ -31,7 +31,8 @@ async function getData(values, { resetForm, setSubmitting }, navigate){
 
         if(response.ok){
             resetForm()
-            navigate("/success")
+            setComplete()
+            
         }
     } catch (error){
         console.log(error);
@@ -42,7 +43,6 @@ async function getData(values, { resetForm, setSubmitting }, navigate){
 
 
  export default function CustomFormik(){
-    const navigate = useNavigate();
 
     return (
         <>
@@ -52,7 +52,7 @@ async function getData(values, { resetForm, setSubmitting }, navigate){
                     phoneNumber: '',
                     name: '',
                 }}
-                onSubmit={(values, actions) => getData(values, actions, navigate)}
+                onSubmit={(values, actions) => getData(values, actions)}
                 validationSchema={yupSchema}
                 >
                 {({ isSubmitting}) =>(
