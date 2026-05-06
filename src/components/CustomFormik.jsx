@@ -12,7 +12,7 @@ const yupSchema = Yup.object().shape({
 
 async function getData(values, { resetForm, setSubmitting }){
     try{
-        const request = new Request('https://timur-1.onrender.com/submit-data',{
+        const request = new Request('https://backend-service-ckgr.onrender.com/submit-data',{
             method: "POST",
             headers:{
                 "Content-Type": "application/json",
