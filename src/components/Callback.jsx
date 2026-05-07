@@ -14,9 +14,9 @@ export default function Callback(){
         { isSubmitted ? (
             <div id='callback' className={s.callBack_box}>
                 <div className={s.callBack_box__leftSide}>
-                    <h3 className={s.callBack_box__leftSide__heading}>Оставьте номер!</h3>
+                    <h3 className={s.callBack_box__leftSide__heading}>Остались еще вопросы?</h3>
                     <p className={s.callBack_box__leftSide__desc}>
-                        и наш прораб свяжется с вами  и проконсультирует в ближайшее время!</p>
+                        Оставьте номер - наш прораб свяжется с вами  и проконсультирует в ближайшее время!</p>
                 </div>
                 <CustomFormik setComplete={() => setIsSubmitted(false)} />
             </div>) :(
