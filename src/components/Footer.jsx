@@ -30,7 +30,7 @@ const menu_links = {
                         <img className={s.footer__getContactBox__socials__item} src={tg_icon} alt="Telegram"></img>
                         <img className={s.footer__getContactBox__socials__item} src={inst_icon} alt="Instagram"></img>
                     </div>
-                    <a className={s.footer__getContactBox__number} href='tel:+8888888888'>8(800) 888 88 88</a>
+                    <a className={s.footer__getContactBox__number} href='tel:+996 (551) 83-02-95'>+996 (551) 83-02-95</a>
                 </div>
             </div>
         </>
