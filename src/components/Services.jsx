@@ -20,7 +20,7 @@ const ServiceItem = ({ service }) => {
     >
       <div className={s.pic_line__inner}>
         <div className={s.pic_line__img_wrapper}>
-          <img src={service.img} alt={service.alt} />
+          <img src={service.img} alt={service.alt}  loading="lazy"/>
           <p className={s.pic_line__img_wrapper__heading}>{service.title}</p>
         </div>
         <div className={s.desc_container_back}>

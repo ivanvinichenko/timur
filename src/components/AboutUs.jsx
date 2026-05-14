@@ -6,7 +6,7 @@ export default function AboutUs(){
     return(
         <>
             <div id='about_us' className={s.aboutUs_box}>
-                <img className={s.aboutUs_box__img} src={aboutUs} alt='Примеры ремонта'/>
+                <img className={s.aboutUs_box__img} src={aboutUs} alt='Примеры ремонта' loading="lazy"/>
                 <div className={s.description_box}>
                     <img className={s.description_box__star} src={star}  alt='Звезда'/>
                     <h2 className={s.description_box__heading}>О нас</h2>

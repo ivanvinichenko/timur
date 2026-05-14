@@ -68,8 +68,8 @@ async function getData(values, { resetForm, setSubmitting }, setComplete){
                         type="submit"
                         disabled={isSubmitting}>
                             {isSubmitting?
-                            <p className={s.form__button__text}>Отправка...</p>:
-                            <p className={s.form__button__text}>Жду звонка!</p>}
+                            <span className={s.form__button__text}>Отправка...</span>:
+                            <span className={s.form__button__text}>Жду звонка!</span>}
                         </button>
                     </Form>
                 )}

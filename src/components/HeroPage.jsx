@@ -10,13 +10,13 @@ export default function HeroPage(){
             <div className={s.bg_container}>
                 <div className={s.pictures_container}>
                     <div >
-                        <img src={flat_1} alt='Пример квартиры'></img>
+                        <img src={flat_1} alt='Пример квартиры' loading="lazy"></img>
                     </div>
                     <div >
-                        <img src={flat_2} alt='Пример квартиры'></img>
+                        <img src={flat_2} alt='Пример квартиры' loading="lazy"></img>
                     </div>
                     <div >
-                        <img src={flat_3} alt='Пример квартиры'></img>
+                        <img src={flat_3} alt='Пример квартиры' loading="lazy"></img>
                     </div>
                 </div>
                 <div className={s.features}>
