@@ -1,5 +1,4 @@
 import { Formik, Field, Form, ErrorMessage} from 'formik';
-import { useNavigate } from "react-router";
 import s from './CustomFormik.module.scss'
 import * as Yup from 'yup';
 
@@ -68,7 +67,10 @@ async function getData(values, { resetForm, setSubmitting }, setComplete){
                         className={s.form__button} 
                         type="submit"
                         disabled={isSubmitting}>
-                            {isSubmitting?'Отправка...':'Жду звонка!'}</button>
+                            {isSubmitting?
+                            <p className={s.form__button__text}>Отправка...</p>:
+                            <p className={s.form__button__text}>Жду звонка!</p>}
+                        </button>
                     </Form>
                 )}
                 </Formik>

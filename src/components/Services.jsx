@@ -1,12 +1,12 @@
 import {useState} from 'react'
 import s from './Services.module.scss'
-import deconstruction from '../assets/deconstruction.svg'
-import plastering from '../assets/plastering.svg'
-import framing from '../assets/framing.svg'
-import wiring from '../assets/wiring.svg'
-import plumbing from '../assets/plumbing.svg'
-import tiling from '../assets/tiling.svg'
-import finishing from '../assets/finishing.svg'
+import deconstruction from '../assets/deconstruction.webp'
+import plastering from '../assets/plastering.webp'
+import framing from '../assets/framing.webp'
+import wiring from '../assets/wiring.webp'
+import plumbing from '../assets/plumbing.webp'
+import tiling from '../assets/tiling.webp'
+import finishing from '../assets/finishing.webp'
 
 
 

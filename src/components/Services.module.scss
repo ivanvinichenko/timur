@@ -80,6 +80,10 @@
 
 
 @media(max-width: 850px) {
+  .heading{
+    margin: 60px auto 20px;
+    font-size:$font-size_prices;
+  }
   .pic_line {
     justify-content: center;
     &__inner {
@@ -87,6 +91,11 @@
     }
   }
 }
+
+@media(max-width: 650px) {
+  .heading{
+    @include heading_small;
+}}
 
 @media(max-width: 574px) {
   .pic_line {

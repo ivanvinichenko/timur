@@ -26,6 +26,10 @@
     background-color:#F9F9F9;
     border-radius: 200px 200px 0 0 ;
 
+
+}
+.pictures_container div img{
+    object-fit:cover;
 }
 .features{
     @include flex-space-between;

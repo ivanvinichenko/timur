@@ -29,6 +29,10 @@
         }
         &:disabled {
       background-color: #ccc;
+
+      &__text{
+        color:black;
+      }
     }
     }
 }

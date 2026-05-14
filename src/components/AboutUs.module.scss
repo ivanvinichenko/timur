@@ -7,6 +7,12 @@
     height:auto;
     max-width:1100px;
     gap:20px;
+
+    &__img{
+        max-width:500px;
+        width:100%;
+        display:block;
+    }
 }
 .description_box{
     @include flex-space-between-column;

@@ -1,7 +1,7 @@
 import s from './HeroPage.module.scss'
-import flat_1 from '../assets/flat_1.svg'
-import flat_2 from '../assets/flat_2.svg'
-import flat_3 from '../assets/flat_3.svg'
+import flat_1 from '../assets/flat_1.webp'
+import flat_2 from '../assets/flat_2.webp'
+import flat_3 from '../assets/flat_3.webp'
 import stars from '../assets/5_stars.svg'
 
 export default function HeroPage(){
