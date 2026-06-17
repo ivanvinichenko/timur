@@ -28,12 +28,12 @@
             background-color: #f0f0f0;
         }
         &:disabled {
-      background-color: #ccc;
-
-      &__text{
-        color:black;
-      }
-    }
+            background-color: #ccc;
+        }
+        &__text{
+            color:black;
+        }
+    
     }
 }
 .error {
